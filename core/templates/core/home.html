@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src={% static "core/home.js" %}></script>
+</head>
+<body>
+    <div style="display: flex; margin-bottom: 50px;">
+        <div>
+            <form id="api_request_list" action="">
+                
+                <button><div>LISTA</div></button>
+            </form>
+        </br>
+            <form id="api_request_create" action="">
+                
+                <button><div>CREA</div></button>
+            </form>
+        </br>
+            <form id="api_request_retrive" action="">
+                
+                <button><div>CERCA</div></button>
+            </form>
+        </br>  
+            <form id="api_request_destroy" action="">
+                
+                <button><div>ELIMINA</div></button>
+            </form>
+        </br>
+            <form action="" id="api_request_filtered_list">
+                <fieldset id="name">
+                    <label>Nome</label>
+                    <input type="text" id="nameValore">
+                    <select id="nameName">
+                        <option value="">nome esatto</option>
+                        <option value="__icontains">il nome contiene</option>
+                        <option value="__noncontains">il nome non contiene</option>
+                    </select>
+                </fieldset>
+                <fieldset id="autore">
+                    <label>autore</label>
+                    <input type="text" id="autoreValore">
+                </fieldset>
+                <fieldset id="intensity">
+                    <label>intensity</label>
+                    <input type="number" id="intensityValore">
+                    <select id="intensityName">
+                        <option value="">valore esatto</option>
+                        <option value="__gte">maggiore o uguale a</option>
+                        <option value="__gt">maggiore di</option>
+                    </select>
+                </fieldset>
+
+                <button>FILTRA E CERCA</button>
+            </form>
+        </br>
+        </div>
+
+        <div id="forms" style="margin-left: 10%; display: flex; flex-direction: column;">
+
+        </div>
+        <div id="aggiornaDiv" style="margin-left: 30px;">
+
+        </div>
+    </div>
+    
+    <div id="disegno" style="text-align: center;">
+        ciao
+    </div>
+</body>
+</html>
